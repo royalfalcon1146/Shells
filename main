@@ -1,0 +1,25 @@
+# Go to the top of the tree
+cd\
+# Enter the following folder
+cd folder_name
+# Go back to the previous folder
+cd..
+# show contents of the current folder
+dir
+# enter the following folder in the current user's folders
+cd /d %userprofile%\Desktop #here it is entering the desktop of the following user
+# change the drive to drive "d"
+d:
+# make a new folder in the following directory called "myfolder", if you wanna use a space in the folder name, put the name in quotes
+mkdir myfolder
+mkdir "my folder"
+# make a folder with a subfolder
+mkdir folder\subfolder
+# rename file or folder to "newfolder"
+ren oldfolder newfolder
+
+
+# Show updates available for apps on windows
+winget upgrade 
+# Download those updates
+winget upgrade -h --all
