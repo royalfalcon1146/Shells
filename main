@@ -1,4 +1,5 @@
 # type "help" for the list of commands
+# type a command then after that "/?" to see all the functions it has
 # Go to the top of the tree
 cd\
 # Enter the following folder
@@ -43,3 +44,9 @@ shutdown
 shutdown -restart
 # force restart
 shutdown -force -restart
+# hibernate
+shutdown /h
+# abort a shutdown
+shutdown /a
+# log off
+shutdown /l
