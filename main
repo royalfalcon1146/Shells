@@ -36,3 +36,10 @@ rd foldername
 winget upgrade 
 # Download those updates
 winget upgrade -h --all
+
+# shutdown the pc
+shutdown
+# restart it
+shutdown -restart
+# force restart
+shutdown -force -restart
