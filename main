@@ -1,3 +1,4 @@
+# type "help" for the list of commands
 # Go to the top of the tree
 cd\
 # Enter the following folder
@@ -17,7 +18,19 @@ mkdir "my folder"
 mkdir folder\subfolder
 # rename file or folder to "newfolder"
 ren oldfolder newfolder
-
+ren oldfile.extension newfile.extension
+# copying files
+copy location\file.extension newlocation\file.extension
+# copying folders with their contents, if the the folder you are copying to doesn't exist, it will make a new one with the same name
+xcopy /s /i c:\myfolder c:\mynewfolder
+# delete all contents of a folder with the hidden files, this doesn't delete the folder itself
+del /h foldername
+# delete a file
+del filename.extension
+# delete all the files in the following folder
+del *.*
+# delete a folder, cmd wont allow unless it is empty
+rd foldername
 
 # Show updates available for apps on windows
 winget upgrade 
