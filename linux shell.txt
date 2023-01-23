@@ -12,6 +12,8 @@ echo ${variable name}
 env
 6. Set a new variable, make sure there are no spaces after and before the equal sign
 export {variable name}={its value}
+7. See the exit status, see what each exit status number means
+echo $?
 
 FOLDERS AND FILES
 1. Make a new folder
