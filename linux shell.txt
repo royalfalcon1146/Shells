@@ -1,10 +1,26 @@
-1. See contents of the file
-cat {file}
-2. See all files and directories 
+BASICS
+1. See all files and directories 
 ls
-3. Output something
+2. Enter a folder or execute a file
+./{name with extension}
+3. See contents of the file
+cat {file}
+4. Output something
 echo "{string}"
 echo ${variable name}
-4. See all variables
+5. See all variables
 env
-5
+6. Set a new variable, make sure there are no spaces after and before the equal sign
+export {variable name}={its value}
+
+FOLDERS AND FILES
+1. Make a new folder
+mkdir {folder name}
+2. Delete a folder with its things
+rm -r {folder name}
+3. Making a new file
+cat > {file name with the extension}
+4. Deleting a file
+rm
+5. Make a file/script executable
+chmod +x {file name}
