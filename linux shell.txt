@@ -24,5 +24,5 @@ cat > {file name with the extension}
 rm
 5. Make a file/script executable
 chmod +x {file name}
-6. See the file's word, line, character, or byte count
+6. See the file's line, word, and character count respectively
 wc {file name with extension}
