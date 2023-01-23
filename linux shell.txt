@@ -28,3 +28,5 @@ rm
 chmod +x {file name}
 6. See the file's line, word, and character count respectively
 wc {file name with extension}
+7. Opening the file with a certain app, this depends on how the app's name is stored on linux, vs code is "code"
+code {my file name with extension}
