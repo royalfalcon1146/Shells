@@ -1,6 +1,6 @@
 BASICS
-1. See all files and directories 
-ls
+1. See all files and directories, with what is hidden and descriptions
+ls -la
 2. Enter a folder or execute a file
 ./{name with extension}
 3. See contents of the file
@@ -14,6 +14,10 @@ env
 export {variable name}={its value}
 7. See the exit status, see what each exit status number means
 echo $?
+8. Which directory is being used right now
+pwd
+9. Copy the path of the current directory
+pwd | pbcopy
 
 FOLDERS AND FILES
 1. Make a new folder
@@ -30,3 +34,9 @@ chmod +x {file name}
 wc {file name with extension}
 7. Opening the file with a certain app, this depends on how the app's name is stored on linux, vs code is "code"
 code {my file name with extension}
+
+COPYING AND MOVING
+1. Copy a file, first the file location path then the destination path
+cp ./directory/file.ext ./newdestination
+2. Copy a directory
+cp -r ./directory/folder_to_copy ./new_destination
