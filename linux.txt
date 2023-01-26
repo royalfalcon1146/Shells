@@ -2,41 +2,104 @@ BASICS
 1. See all files and directories, with what is hidden and descriptions
 ls -la
 2. Enter a folder or execute a file
-./{name with extension}
+./<name with extension>
 3. See contents of the file
-cat {file}
+cat <file>
 4. Output something
-echo "{string}"
-echo ${variable name}
+echo "<string>"
+echo $<variable name>
 5. See all variables
 env
 6. Set a new variable, make sure there are no spaces after and before the equal sign
-export {variable name}={its value}
+export <variable name>=<its value>
 7. See the exit status, see what each exit status number means
 echo $?
 8. Which directory is being used right now
 pwd
 9. Copy the path of the current directory
 pwd | pbcopy
+10. Show all processes running with their PID's
+ps ax 
+11. Show how much free space there is
+free
+12. Kill a process with its PID
+kill <some number>
+13. See how long the pc has been turned on
+uptime
+14. Get the name of a file without the extension, make sure to mention the extenison after the file name
+basename myfile.ext .ext
 
 FOLDERS AND FILES
 1. Make a new folder
-mkdir {folder name}
+mkdir <folder name>
 2. Delete a folder with its things
-rm -r {folder name}
-3. Making a new file, when you finish from making the file, press CTRL + D to exit
-cat > {file name with the extension}
+rm -r <folder name>
+3. Making a new file, when you finish from editing the file, press CTRL + D to exit
+cat > <file name with the extension>
 4. Deleting a file
 rm
-5. Make a file/script executable
-chmod +x {file name}
+5. Make a file/script executable, 'chmod' is used to change permissions of the file
+chmod +x <file name>
 6. See the file's line, word, and character count respectively
-wc {file name with extension}
+wc <file name with extension>
 7. Opening the file with a certain app, this depends on how the app's name is stored on linux, vs code is "code"
-code {my file name with extension}
+code <my file name with extension>
 
 COPYING AND MOVING
 1. Copy a file, first the file location path then the destination path
 cp ./directory/file.ext ./newdestination
 2. Copy a directory
 cp -r ./directory/folder_to_copy ./new_destination
+
+REDIRECTION: the process of sending a stream to a different destination
+1. Output in a text file, each time it does it, it clears the file then writes new output
+./my_executable_file.py > my_new_output.txt
+2. Append the file with new output, use ">>"
+./my_executable_file.py > my_output_file.txt
+3. Use a file as input of a program, the second one is the input
+./my_executable_file.py < my_input_file.txt
+4. Use method 3 but the error will output in another file
+./my_executable_file.py < my_input_file.txt 2> my_error_file.txt
+5. Write text into a text file, you can rewrite it with ">", or you can append with ">>"
+echo "I love shawarma" > my_new_output.txt
+
+PIPES: connect the output of one program to the input of another in order to pass data between programs.
+1. Get output then use regex on it
+./my_output.py | grep www[.]\w*[.]com 
+
+SIGNALS: tokens delivered to running processes to indicate a desired action 
+1. Interrupt a signal, SIGINT signal
+Ctrl + C
+2. Stopp a signal, SIGSTOP signal
+Ctrl + Z
+3. Continue signaling
+fg 
+4. Terminate the signal, SIGTERM signal
+kill <PID>
+
+BASH SCRIPTING
+1. Make sure to start it with "#!/bin/bash" and file extension "sh"
+2. Write any code that works on the linux terminal 
+3. You can separate the code by writing each one on a line or use semicolons
+4. Using conditions, you don't need to indent, but it will work if you do, end it with "fi"
+if grep "Albraa" /somefolder/somefile.txt; then
+    echo "It worked"
+else 
+    echo "Error happened!"
+fi
+5. TESTS: command for evaluating, 0 if true, one if false
+    a. Check if string variable is empty
+    if test -n "$PATH"; then echo "Your path is not empty; fi
+    b, ir simply in square brackets, make sure to put spaces, it is very sensitive
+    if [ -n "$PATH" ] 
+
+
+GLOBS
+1. Starting with "A"
+A*
+2. Ending with "A"
+*A 
+3. Star sign means anything, so "echo *" would show every file
+4, Files with four character names ending with ".py"
+????.py
+
