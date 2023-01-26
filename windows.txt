@@ -28,10 +28,10 @@ xcopy /s /i c:\myfolder c:\mynewfolder
 del /h foldername
 # delete a file
 del filename.extension
-# delete all the files in the following folder
-del *.*
-# delete a folder, cmd wont allow unless it is empty
-rd foldername
+# delete all the files in the following folder, "/q" is for doing it without making sure from the user
+del /q *
+# delete a folder, this will delete it without making sure it is empty, "/s" for all folders, "/q" for quietly without making sure from the user
+rmdir /s /q foldername
 
 # Show updates available for apps on windows
 winget upgrade 
