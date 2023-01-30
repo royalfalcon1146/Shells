@@ -1,6 +1,6 @@
 #!/bin/bash
 #? Make sure to start it with "#!/bin/bash" 
-#? Write any code that works on the linux terminal 
+#? Write any code that works on the linux terminal, any code here also works on the terminal too
 #? You can separate the code by writing each one on a line or use semicolons
 
 #? IF CONDITION
@@ -32,3 +32,8 @@ if [ -n "$PATH" ]
 if [[ $myvariable -eq 9 ]] 
 #* Test to see if a variable is not equal to an integer
 if [[ $myvariable -le 9]]
+
+#? DIFFERENCE BETWEEN TWO FILES
+diff oldfile newerfile
+#* output of left arrow then the code means, this line was in the old file but not the new one
+#* output of right arrow then code means, this code was added in the newer file, but isnt present in the old one
