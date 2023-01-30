@@ -37,3 +37,11 @@ if [[ $myvariable -le 9]]
 diff oldfile newerfile
 #* output of left arrow then the code means, this line was in the old file but not the new one
 #* output of right arrow then code means, this code was added in the newer file, but isnt present in the old one
+
+#* another way, "diff -u", negative sign means removed, plus sign means added
+deff -u oldfile newerfile
+#* word difference
+wdiff oldfile newerfile
+
+#*patch the difference if it is stored in a file, change.diff here stores the difference between the two files
+patch oldfile < change.diff
