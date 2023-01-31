@@ -1,5 +1,7 @@
 # type "help" for the list of commands
 # type a command then after that "/?" to see all the functions it has
+# Exit 
+exit 
 # Go to the top of the tree
 cd\
 # Enter the following folder
