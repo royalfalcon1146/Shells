@@ -52,3 +52,9 @@ shutdown /h
 shutdown /a
 # log off
 shutdown /l
+
+# kill a process by its name
+taskkill /IM <process-name> /F
+
+# make windows wait for x seconds, x here is 10
+TIMEOUT /T 10
