@@ -44,6 +44,12 @@ chmod +x <file name>
 wc <file name with extension>
 7. Opening the file with a certain app, this depends on how the app's name is stored on linux, vs code is "code"
 code <my file name with extension>
+8. See first n lines of a file
+head -n file.ext
+9. See the last n lines of a file
+tail -n file.ext
+10. See how many lines a file is
+wc -l file.ext
 
 COPYING AND MOVING
 1. Copy a file, first the file location path then the destination path
@@ -87,6 +93,7 @@ if grep "Albraa" /somefolder/somefile.txt; then
 else 
     echo "Error happened!"
 fi
+
 5. TESTS: command for evaluating, 0 if true, one if false
     a. Check if string variable is empty
     if test -n "$PATH"; then echo "Your path is not empty; fi
@@ -103,3 +110,8 @@ A*
 4, Files with four character names ending with ".py"
 ????.py
 
+Troubleshooting and Debugging
+Run a file and see the logs of it
+strace ./filename.ext
+Store the logs of the strace command of the file you are running 
+strace -o filename.strace ./myexecuteable.ext
