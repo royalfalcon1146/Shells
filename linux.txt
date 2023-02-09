@@ -28,6 +28,7 @@ kill <some number>
 uptime
 14. Get the name of a file without the extension, make sure to mention the extenison after the file name
 basename myfile.ext .ext
+15. Clear the terminal, basically starting a fresh terminal
 
 FOLDERS AND FILES
 1. Make a new folder
