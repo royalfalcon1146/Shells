@@ -33,6 +33,7 @@ del filename.extension
 # delete all the files in the following folder, "/q" is for doing it without making sure from the user
 del /q * folder_name
 # delete a folder, this will delete it without making sure it is empty, "/s" for all folders, "/q" for quietly without making sure from the user
+# if it cannot delete the folder, it will try to delete as much as it can inside of it.
 rmdir /s /q foldername
 
 # Show updates available for apps on windows
